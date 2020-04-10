@@ -53,6 +53,9 @@ module.exports = {
                 if (this.getConfiguredTxPower(handle) !== null) {
                     power = this.getConfiguredTxPower(handle);
                 }
+                this.logger.info(`peripheral: ${peripheral}`);
+                this.logger.info(`power: ${power}`);
+                this.logger.info(`measuredPower: ${peripheral.measuredPower}`);
 
                 const distance = this.calculateDistance(peripheral.rssi, power);
                 const maxDistance = this.settings.maxDistance;
