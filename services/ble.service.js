@@ -74,6 +74,8 @@ module.exports = {
                         options: {}
                     };
 
+                    this.logger.info(payload);
+
                     this.broker.emit('data.found', payload);
                 }
             }
