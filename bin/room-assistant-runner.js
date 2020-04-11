@@ -15,7 +15,7 @@ function getDependencies() {
 
         if (services) {
             console.log(`Installing dependencies for: ${services}`);
-            toBeInstalled = _.pick(toBeInstalled, services.split(','))
+            toBeInstalled = _.pick(toBeInstalled, services.split(','));
         }
         toBeInstalled = _.flatMap(toBeInstalled, (module) => module);
 
